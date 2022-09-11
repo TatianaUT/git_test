@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title id = "Document"></title>
+    <title id = "Document">Tatiana Torbanenko</title>
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="css/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gill+Sans&family=swap"
+      rel="stylesheet"   
+    />
 </head>
+
 <body>
-  <h1>About</h1>  
-  <p>I'm Tatiana</p>
-  <h1>Experience</h1>  
+  <header></header>
+  <header id="header-container"></header>
+
+  <nav>
+    <ul>
+      <li><a href="#about" target="_blank">About</a></li>
+      <li><a href="#skills" target="_blank">Skills</a></li>
+      <li><a href="#experience" target="_blank">Experience</a></li>
+      <li><a href="#connect"target="_blank">Connect</a></li>
+     
+    </ul>
+  </nav>
+
+ 
+  
+<section id="about-container">
+  <h2>About</h2>
+  <p>
+    My name is Tatiana. I moved from Russia to California with my family 6 years ago. <br>
+    In my free time I like to travel and read. I like to study programmer languages. <br>
+    I would like to become the Web developer. <br>
+  </p>
+</section>
+
+<section id="experience">
+  <h2><b>Experience</b></h2>  
   <ul>
-    <li>I worked a lawer in Company in Russia during 8 years. </li>
-    <li>I worked a sells assistent in USA during 5 years. </li>
+    <li>I am currently a student of Code The Dream.</li>
+    <li>I worked a sales assistent in USA for 5 years. </li>
+    <li>I worked a lawer in companies in Russia for 8 years. </li>
   </ul>
-  <h1>Connect</h1>
-  <a href="https://github.com/TatianaUT/git_test">github</a>
-  <a href="https://www.facebook.com/profile.php?id=100010308880318">facebook</a>
+</section>
+
+<section>
+  <h2><b>Connect</b></h2>
+</section>
+<section id ="connect">
+  <a href="https://github.com/TatianaUT/git_test">github</a><br />
+  <a href="https://www.facebook.com/profile.php?id=100010308880318">facebook</a><br />
   <a href="#">agata_t@inbox.ru</a>
+</section>
+
   <section id = "skills">
     <h2>
-      Skills
+      <b>Skills</b>
     </h2>
-    <ul></ul>  
+    <ul>
+      
+    </ul>  
   </section>
-  <section>
-    <h2>
-      Leave a Message
+  
+    <section id = "message"> 
+    <h2><b>Leave a Meassage:</b><br />
     </h2>
     <form name="leave_message">
-      <label for="name">Name: </label>
-      <input type="text" name="name" required /> <br />
-      <label for="email">Email: </label>
-      <input type="text" name="email" required /><br />
-      <textarea name="message" required></textarea><br />
-      <button type="submit"> Submit</button><br />
+      <label for="name">Name: </label><br />
+      <input type="text" name="name" required="true"/> <br /> 
+     
+      <label for = "email">Email</label><br /> 
+      <input type="text" name="email" required /><br /> 
+      
+      <label for="message">Message </label><br />
+      <textarea name="message" required="true" placeholder="Please enter message"></textarea><br />
+      <button type="submit"><b>Submit</b></button><br />
     </form>  
   </section>
   <section id="messages">
-    <h2>
+    <h4>
       Messages
-    </h2>
+    </h4>
     <ul></ul>
   
   </section>
@@ -50,4 +96,7 @@
   </script>
 
 </body>
+</html>
+
+
 </html>
