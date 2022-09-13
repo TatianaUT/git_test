@@ -1,5 +1,10 @@
+/* - Base Element Styles -- */
 
+* {
+  box-sizing: border-box;
+}
 body {
+    margin: 0;
     background-color: indianred; 
     color: rgb(2, 2, 115);
     margin: 0;
@@ -7,6 +12,12 @@ body {
     font-family: "Gill Sans", sans-serif;
     line-height: 1.7;
   }
+  header {
+    width: 100%;
+    min-height: 70px;
+    background-color:  rgb(238, 178, 238);
+  }
+
   section {
     padding: 5px;
     margin: 5px;
@@ -15,7 +26,8 @@ body {
 h1 {
     font-size: 3.5em;
     margin-top: 30px auto 0 auto;
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Dekko", sans-serif;
+    font-size: 3em;
 }
   
   h2 {
@@ -24,20 +36,36 @@ h1 {
   }
   
   h3 {
-    font-size: 20.5rem;
+    font-size: 2.5rem;
   } 
-
- #messages {
-    background-color: powderblue;
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 18px;
-    color: teal;
-} 
 p {
     line-height: 0.8;
     font-family: "Gill Sans", sans-serif;
   }
+
+  /* -- Navigation -- */
+
+.nav-container,
+.main-nav,
+.img-div,
+.experience-container,
+.skills-container,
+.connect-container,
+.leave-message {
+  display: flex;
+}
+
+.main-nav a {
+  display: block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.nav-container,
+.main-nav {
+  flex-direction: column;
+  align-items: center;
+}
   
 #about {
     background-color: white;
@@ -45,7 +73,7 @@ p {
 }
 
 #experience {
-    background-color: palegreen;
+    background-color: rgb(238, 178, 238); 
     border-radius: 18px;
     text-align: justify;
 }
@@ -54,7 +82,7 @@ p {
     
     text-align: justify;
     border-radius: 18px;
-    background-color: palegreen;
+    background-color: rgb(238, 178, 238);
    
 }
 
@@ -65,29 +93,26 @@ p {
     margin: 10px auto;
     line-height: 5;
   }
-   
 
 #message {
-    background-color: azure;
+    background-color: rgb(176, 210, 230);
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 18px;
-    color: mediumaquamarine;
-
-}
+    color: rgb(200, 37, 16);
+    }
 
 #messages {
-    background-color: powderblue;
+    background-color: rgb(176, 210, 230);
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 18px;
-    color: teal;
+    color: rgb(200, 37, 16);
 }
 
 #message ul {
     text-align: center;
 }
-
 
 label {
     color: slategrey;
@@ -106,3 +131,36 @@ button {
 
 button:hover {
     background-color: ghostwhite;
+}
+
+/* -- Media Queries -- */
+@media (min-width: 769px) {
+  .nav-container,
+  .main-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .nav-container {
+    align-items: center;
+  }
+  .main-nav {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) {
+  .nav-container,
+  .main-container {
+    width: 80%;
+    max-width: 1150px;
+  }
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  input {
+    width: 50%;
+  }
+  textarea {
+    width: 50%;
+  }
+}
