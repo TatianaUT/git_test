@@ -48,3 +48,25 @@ messageForm.addEventListener('submit', myEvent => {
     newMessage.appendChild(removeButton);
     messageForm.reset();
 });
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/TatianaUT/repos");
+githubRequest.send();
+
+//Handle Response from Server
+
+githubRequest.onload = function () {
+  var repositories = JSON.parse(this.response);
+  //console.log(repositories);
+  //Display Repositories in List
+  let projectSection = document.getElementById("projects");
+  let projectList = projectSection.querySelector("ul");
+  for (let i = 0; i < repositories.length; i++) {
+    let project = document.createElement("li");
+    let linkProject = document.createElement("a");
+
+    project.innerText = repositories[i].name; //set the inner text of a project variable to the current Array element's name property
+    project.className = "projects-li";
+    projectList.appendChild(project);
+  }
+};
