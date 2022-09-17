@@ -70,6 +70,6 @@ fetch("https://api.github.com/users/TatianaUT/repos")
     }
   })
   .catch((err) => {
-    //fire a function when there is an error
+    //a function when there is an error
     console.log("rejected", err.message);
   });

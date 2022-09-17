@@ -12,38 +12,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Gill+Sans&family=swap"
       rel="stylesheet"   
-    />
+    /><script src="https://kit.fontawesome.com/5960c4955c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
+  <header id="header-container">
+    <nav class="navbar">
+      <div class="photo-container">
+        <img
+          class="profilephoto"
+          src="image/tanya_winter.jpg"
+          alt="tanya picture" align="left"
+          vspace="8" hspace="50"
+        />
+  <div class ="container">
+  <header id="header">
     <h1>Tatiana Torbanenko</h1>
 
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#connect">Connect</a></li>
-    </ul>
-  </nav>
-  
-  </header>
+    <header id="header-container">
 
-  
+      <ul class="menu-main">
+        <!-- <li><a href="#home" class="current">Home</a></li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <l><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li> 
+        <li><a href="#message">Leave a Message</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    
+  </nav> 
+  </header>
   
 <section id="about-container">
   <h2><b>About</b></h2>
   
-  <p>
+  <p class="intro">
     My name is Tatiana. I moved from Russia to California with my family 6 years ago. <br>
-    In my free time I like to travel and read. I like to study programmer languages. <br>
+    In my free time I like to travel, read and practice the piano. I like to study programmer languages. <br>
     I would like to become the Web developer. <br>
   </p>
 </section>
 
 <section id="experience">
-  <h2><b>Experience</b></h2>  
+  <h2>Experience</h2>  
   <ul>
     <li>I am currently a student of Code The Dream.</li>
     <li>I worked a sales assistent in USA for 5 years. </li>
@@ -51,19 +64,9 @@
   </ul>
 </section>
 
-
-  <h2><b>Connect</b></h2>
-</section>
-<section id ="connect">
-  <a href="https://github.com/TatianaUT/git_test">github</a><br />
-  <a href="https://www.facebook.com/profile.php?id=100010308880318">facebook</a><br />
-  <a href="#">agata_t@inbox.ru</a>
-</section>
-
-
   <section id = "skills">
     
-    <h2><b>Skills</b></h2>
+    <h2>Skills</h2>
     <ul></ul>
         <ul class="skills-container"></ul>
         <div style="clear:both;"></div>
@@ -76,10 +79,8 @@
     </ul>
   </section>
   
-
-  
     <section id = "message"> 
-    <h2><b>Leave a Meassage:</b><br />
+    <h2><b>Leave a Message:</b><br />
     </h2>
     <form name="leave_message">
       <label for="name">Name: </label><br />
@@ -89,7 +90,7 @@
       <input type="text" name="email" required /><br /> 
       
       <label for="message">Message </label><br />
-      <textarea name="message" required="true" placeholder="Please enter message"></textarea><br />
+      <textarea name="message" required="true" placeholder="Please enter the message"></textarea><br />
       <button type="submit"><b>Submit</b></button><br />
     </form>  
   </section>
@@ -101,10 +102,25 @@
   
   </section>
 
-  <footer></footer>
+  <footer id="footer-container">
+   
+  <h2><b>Connect</b></h2>
+  </section>
+  <section id ="connect">
+
+  <ul>
+  
+  <li><a href="https://github.com/TatianaUT/git_test"  target="_blank">
+    <i class="fab fa-github-square"</ion-icon></i>github</a></li> 
+  <li><a href="https://www.facebook.com/profile.php?id=100010308880318" target="_blank"><i class="fab fa-facebook-square"</ion-icon></i>facebook</a></li>
+  <li><a href="mailto:agata_t@inbox.ru"><ion-icon></i>agata_t@inbox.ru</a></li>
+  
+  </ul>
+  </footer>
+
   <script src="js/index.js">
   </script>
-
+</div>
 </body>
 </html>
 
