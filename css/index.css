@@ -3,19 +3,21 @@
 * {
   box-sizing: border-box;
 }
+
 body {
     margin: 0;
-    background-color: indianred; 
+    background-color: rgb(250, 245, 245); 
     color: rgb(2, 2, 115);
     margin: 0;
     text-align: center;
     font-family: "Gill Sans", sans-serif;
     line-height: 1.7;
   }
+
   header {
     width: 100%;
     min-height: 70px;
-    background-color:  rgb(238, 178, 238);
+  
   }
 
   section {
@@ -43,47 +45,86 @@ p {
     font-family: "Gill Sans", sans-serif;
   }
 
-  /* -- Navigation -- */
 
-.nav-container,
-.main-nav,
-.img-div,
-.experience-container,
-.skills-container,
-.connect-container,
-.leave-message {
-  display: flex;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: #8b00ff;
 }
-
-.main-nav a {
-  display: block;
-  padding: 10px 15px;
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #220303;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
   text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #f0e9f0;}
+.menu-main a.current, .menu-main a:hover{color: #fe869a;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #ff00ff;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
 }
 
-.nav-container,
-.main-nav {
-  flex-direction: column;
-  align-items: center;
+/* ================================= 
+  Flexbox items
+==================================== */
+.profilephoto {
+  width: 6%;
+  box-shadow: 0 2px 2px 0 #6d6161;
+  border-radius: 20px;
 }
-  
+
 #about {
-    background-color: white;
+    background-color:  #ffc0cb; 
     border-radius: 18px;
+    text-align: right;
 }
 
 #experience {
-    background-color: rgb(238, 178, 238); 
+    background-color: #ffc0cb; 
     border-radius: 18px;
     text-align: justify;
 }
 
-#skills {
-    
+#skills { 
     text-align: justify;
     border-radius: 18px;
-    background-color: rgb(238, 178, 238);
-   
+    background-color: #ffc0cb;   
 }
 
 #skills-container {
@@ -93,26 +134,25 @@ p {
     margin: 10px auto;
     line-height: 5;
   }
-
-#message {
-    background-color: rgb(176, 210, 230);
-    padding: 15px;
-    margin-bottom: 5px;
+  
+  #projects {
+    text-align: justify;
     border-radius: 18px;
-    color: rgb(200, 37, 16);
-    }
-
-#messages {
-    background-color: rgb(176, 210, 230);
-    padding: 15px;
-    margin-bottom: 5px;
-    border-radius: 18px;
-    color: rgb(200, 37, 16);
+    background-color: #ffc0cb;   
+    font-family: "Gill Sans", sans-serif;
+  }
+#projects-container {
+  width: 100%;
+  text-align: left;
+  margin: 100px auto;
+  line-height: 5;
 }
+
 
 #message ul {
     text-align: center;
 }
+
 
 label {
     color: slategrey;
@@ -125,12 +165,12 @@ input{
 
 button {
     background-color: mintcream;
-    color: cadetblue;
+    color: #8B00FF;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: ghostwhite;
+    background-color: rgb(7, 7, 56);
 }
 
 /* -- Media Queries -- */
@@ -141,12 +181,18 @@ button:hover {
     margin: 0 auto;
   }
   .nav-container {
-    align-items: center;
+    align-items: left;
   }
   .main-nav {
     flex-direction: row;
   }
 }
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media (min-width: 1025px) {
   .nav-container,
   .main-container {
